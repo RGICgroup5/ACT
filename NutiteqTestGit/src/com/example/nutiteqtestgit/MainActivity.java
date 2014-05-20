@@ -16,6 +16,7 @@ import com.nutiteq.rasterlayers.RasterLayer;
 public class MainActivity extends Activity {
 
     private MapView mapView;
+    static String HOI = "hoi";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
