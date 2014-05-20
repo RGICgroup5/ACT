@@ -36,12 +36,17 @@ public class MainActivity extends Activity {
           RasterLayer mapLayer = new RasterLayer(dataSource, 0);
           mapView.getLayers().setBaseLayer(mapLayer);
           
+           
+          String urlAan = "http://geodata.nationaalgeoregister.nl/aan/wms?transparent=true&";
           String url = "http://kaart.maakaart.ee/geoserver/wms?transparent=true&";
           String layers = "topp:states";
+          String layersAan = "aan";
+          String urlBrp = "http://geodata.nationaalgeoregister.nl/brpgewaspercelen/wms?transparent=true&";
+          String layersBrp = "brpgewaspercelen";
 
           // note that data projection is different: WGS84 (EPSG:4326)
           WMSRasterDataSource wmsDataSource = new WMSRasterDataSource(
-               new EPSG4326(), 0, 19, url, "", layers, "image/png");
+               new EPSG4326(), 0, 19, urlBrp, "", layersBrp, "image/png");
           RasterLayer wmsLayer = new RasterLayer(wmsDataSource, 1012);
           wmsLayer.setFetchPriority(-5);
           mapView.getLayers().addLayer(wmsLayer);
