@@ -17,6 +17,7 @@ public class MainActivity extends Activity {
 
     private MapView mapView;
     static String HOI = "hoi";
+    static String HOI2 = "hoi";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
